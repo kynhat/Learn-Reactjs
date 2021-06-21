@@ -17,7 +17,6 @@ function App() {
       // const productList = await productApi.getAll(params);
 
       const productList = await productApi.getAll();
-      console.log(productList);
     }
 
     fetchProducts();
@@ -36,7 +35,7 @@ function App() {
         {/* <Route path="/" component={TodoFeature} exact /> */}
         <Route path="/todos" component={TodoFeature} />
 
-        <Route component={NotFound}/>
+        {/* <Route component={NotFound}/> */}
       </Switch>
 
       Footer

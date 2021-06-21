@@ -38,12 +38,11 @@ function TodoForm(props) {
 
   return (
     <form onSubmit = {form.handleSubmit(_handleSubmit)}>
-      todo Form
-      <InputField 
-        name="title" 
+
+      <InputField
+        name="title"
         label="todo"
         form = {form}
-
       />
     </form>
   );
