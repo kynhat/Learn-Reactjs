@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import './App.css';
+import React, { useEffect, useState } from 'react';
+import { Redirect, Route, Switch } from 'react-router';
+import { Link, NavLink } from 'react-router-dom';
+import NotFound from './components/NotFound';
+import TodoFeature from "./features/Todo";
+import productApi from './Api/productApi';
 function App() {
+  
+  useEffect(() => {
+    const fetchProducts = async () => {
+      //neu muoon truyen them pagram 
+      // const params = {
+      //   _limit: 10,
+      // };
+      // const productList = await productApi.getAll(params);
+
+      const productList = await productApi.getAll();
+      console.log(productList);
+    }
+
+    fetchProducts();
+  },[]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       Header
+
+       <p><Link to="/todos">todo</Link></p>
+       {/* active co the thay doi ten */}
+       <p><NavLink to="/todos" activeClassName="active">todo</NavLink></p>
+      <Switch>
+        {/* <Redirect from="/home" to="/" exact/>
+        <Redirect from="post-list/:postId" to="/posts/:postId" exact /> */}
+        <Route path="/" component={TodoFeature} exact />
+        <Route path="/todos" component={TodoFeature} />
+
+        <Route component={NotFound}/>
+      </Switch>
+
+      Footer
     </div>
   );
 }
