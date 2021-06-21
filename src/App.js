@@ -5,6 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import TodoFeature from "./features/Todo";
 import productApi from './Api/productApi';
+import CounterFeature from './features/Counter';
 function App() {
   
   useEffect(() => {
@@ -31,7 +32,8 @@ function App() {
       <Switch>
         {/* <Redirect from="/home" to="/" exact/>
         <Redirect from="post-list/:postId" to="/posts/:postId" exact /> */}
-        <Route path="/" component={TodoFeature} exact />
+        <Route path="/" component={CounterFeature} exact />
+        {/* <Route path="/" component={TodoFeature} exact /> */}
         <Route path="/todos" component={TodoFeature} />
 
         <Route component={NotFound}/>
