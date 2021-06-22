@@ -6,6 +6,7 @@ import NotFound from './components/NotFound';
 import TodoFeature from "./features/Todo";
 import productApi from './Api/productApi';
 import CounterFeature from './features/Counter';
+import Header from 'components/Header';
 function App() {
   
   useEffect(() => {
@@ -23,11 +24,9 @@ function App() {
   },[]);
   return (
     <div className="App">
-       Header
+       <Header/>
 
-       <p><Link to="/todos">todo</Link></p>
-       {/* active co the thay doi ten */}
-       <p><NavLink to="/todos" activeClassName="active">todo</NavLink></p>
+
       <Switch>
         {/* <Redirect from="/home" to="/" exact/>
         <Redirect from="post-list/:postId" to="/posts/:postId" exact /> */}

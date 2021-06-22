@@ -1,1 +1,6 @@
+- cai reactjs,redux,reactjs-redux,redux-toolkit,hook,material,redux-thunk,...
+- cai axios
 npm install --save axios bootstrap/js/src/modal
+
+- cai notistack (nackbar) 
+    npm install notistack
