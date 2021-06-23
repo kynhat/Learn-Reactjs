@@ -4,3 +4,6 @@ npm install --save axios bootstrap/js/src/modal
 
 - cai notistack (nackbar) 
     npm install notistack
+- hiện thị thông báo
+    - thành công
+    - báo lỗi

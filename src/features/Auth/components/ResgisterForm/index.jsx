@@ -96,7 +96,7 @@ function RegisterForm(props) {
       await onSubmit(values);
     }
 
-    form.reset();
+    // form.reset();
   }
 
   const {isSubmitting} = form.formState;
