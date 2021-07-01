@@ -7,6 +7,7 @@ import TodoFeature from "./features/Todo";
 import productApi from './Api/productApi';
 import CounterFeature from './features/Counter';
 import Header from 'components/Header';
+import ProductFeature from 'features/Product';
 function App() {
   
   useEffect(() => {
@@ -33,11 +34,12 @@ function App() {
         <Route path="/" component={CounterFeature} exact />
         {/* <Route path="/" component={TodoFeature} exact /> */}
         <Route path="/todos" component={TodoFeature} />
+        <Route path="/products" component={ProductFeature} />
 
         {/* <Route component={NotFound}/> */}
       </Switch>
 
-      Footer
+      {/* Footer */}
     </div>
   );
 }
