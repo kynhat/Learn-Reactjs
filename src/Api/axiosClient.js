@@ -3,6 +3,7 @@ import axios from 'axios';
 const axiosClient = axios.create ({
 
   baseURL:'https://api.ezfrontend.com/',
+  timeout: 1000,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -36,7 +37,7 @@ axiosClient.interceptors.response.use(function (response) {
 
     throw new Error(fristMessage.message);
   }
-  const requestUrl =error
+  const requestUrl = error;
   return Promise.reject(error);
 });
 

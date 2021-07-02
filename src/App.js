@@ -10,19 +10,20 @@ import Header from 'components/Header';
 import ProductFeature from 'features/Product';
 function App() {
   
-  useEffect(() => {
-    const fetchProducts = async () => {
-      //neu muoon truyen them pagram 
-      // const params = {
-      //   _limit: 10,
-      // };
-      // const productList = await productApi.getAll(params);
+  //test call api 
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     //neu muoon truyen them pagram 
+  //     // const params = {
+  //     //   _limit: 10,
+  //     // };
+  //     // const productList = await productApi.getAll(params);
 
-      const productList = await productApi.getAll();
-    }
+  //     const productList = await productApi.getAll();
+  //   }
 
-    fetchProducts();
-  },[]);
+  //   fetchProducts();
+  // },[]);
   return (
     <div className="App">
        <Header/>
